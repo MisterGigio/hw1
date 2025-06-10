@@ -1,0 +1,457 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: rgb(26, 26, 26);
+    height: 166px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    color: #B3B3B3;
+    font-size: calc(0.8em + 1vw);
+}
+
+/* ----- HEADER TOP ----- */
+.header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto 15px 0;
+}
+
+/* ----- HAMBURGER MENÙ ----- */
+.menu-toggle {
+    font-size: 24px;
+    cursor: pointer;
+    color: #B3B3B3;
+}
+
+/* ----- TITOLO/LOGO ----- */
+.header-top .logo {
+    color: white;
+    text-align: center;
+    margin: 0;
+    margin-left: 150px;
+    cursor: pointer;
+}
+
+/* ----- LOG IN ----- */
+.logIn ul {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.logIn ul li a {
+    text-decoration: none;
+    color: #B3B3B3;
+    padding: 10px;
+    transition: color 0.5s ease-in-out;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.logIn ul li a:hover {
+    color: white;
+}
+
+/* ----- NAVBAR IN BASSO ----- */
+.nav-bar {
+    margin-top: auto;
+}
+
+.nav-bar ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+}
+
+.nav-bar ul li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #B3B3B3;
+    font-weight: 600;
+    font-size: 14px;
+    transition: color 0.5s ease-in-out;
+    text-transform: uppercase;
+}
+
+.nav-bar ul li a:hover {
+    color: white;
+    font-size: 16px;
+}
+
+/* Menù a scomparsa */
+.menu-toggle-media {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+/* ----- @media QUERY DELLA NAV BAR ----- */
+@media(max-width:768px) {
+
+    .menu-toggle {
+        display: none;
+    }
+
+    .logIn {
+        display: none;
+    }
+
+    /* ----- Menù nascosto di default ----- */
+    .nav-bar {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        opacity: 0;
+    }
+
+    hr {
+        display: none;
+    }
+
+    /* ----- Header versione mobile ----- */
+    .header-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: auto 15px 0;
+        position: relative;
+        width: 100%;
+        height: 100px;
+    }
+
+    .header-top ul li a {
+        margin-right: 10px;
+    }
+
+    /* ----- Titolo/Logo versione mobile ----- */
+    .header-top .logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        color: white;
+        text-align: center;
+        margin: 0;
+        cursor: pointer;
+        height: 40px;
+    }
+
+    .menu-toggle-media {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        font-size: 24px;
+        color: #B3B3B3;
+    }
+
+    /* ----- toggleMenuVisibile() ----- */
+    .menu-toggle-media-Visibile {
+        display: none;
+    }
+
+    .menu-toggle-Visibile {
+        display: block;
+    }
+
+    .nav-bar-Visibile {
+        display: flex;
+        opacity: 1;
+    }
+
+    .logIn-Visibile {
+        display: flex;
+        opacity: 1;
+    }
+
+    /* ----- toggleMenuInvisibile() ----- */
+    .menu-toggle-Invisible {
+        display: none;
+    }
+
+    .menu-toggle-media-Invisible {
+        display: flex;
+    }
+
+    .nav-bar-Invisibile {
+        display: none;
+        opacity: 0;
+    }
+
+    .logIn-Invisibile {
+        display: none;
+        opacity: 0;
+    }
+}
+
+/* Contenitore generale */
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Titolo FEATURES */
+.title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Lista di link */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Ogni link */
+nav ul li a {
+    font-family: "DM Serif Text", serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 7px;
+    color: black;
+    border-radius: 1.5rem;
+    text-decoration: none;
+    letter-spacing: 0.2em;
+    line-height: 1.3em;
+    font-size: 14px;
+}
+
+nav ul li a:hover {
+    border: 1px solid #000;
+}
+
+/* Contenitore principale */
+#img-container {
+    text-align: center;
+    font-size: calc(0.5em + 0.4vw);
+    padding: 0 110px;
+}
+
+/* Container di tutte le card */
+.img-full-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+/* Card singola */
+.navBar-side-container {
+    width: 232px;
+    text-align: left;
+    font-size: 16px;
+    box-sizing: border-box;
+    border-bottom: 2px solid black;
+    margin-bottom: 50px;
+}
+
+/* Immagine dentro la card */
+.navBar-side-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.nav-bar-h3 {
+    font-size: 12px;
+    color: #2B2B2B;
+    padding-top: 5px;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+.nav-bar-h3:hover {
+    text-decoration: underline;
+}
+
+.nav-bar-title {
+    font-size: 20px;
+    padding: 5px 0;
+    cursor: pointer;
+    font-style: italic;
+    font-size: 24px;
+    line-height: 1em;
+    margin-bottom: 5px;
+}
+
+.nav-bar-title:hover {
+    text-decoration: underline;
+}
+
+.nav-bar-subtitle {
+    font-size: 14px;
+    font-weight: normal;
+    color: #3a3a3a;
+    margin-bottom: 35px;
+}
+
+.nav-bar-author,
+.nav-bar-date {
+    display: block;
+    font-size: 13px;
+}
+
+.nav-bar-author {
+    color: #1A1A1A;
+    padding: 5px 0;
+}
+
+.nav-bar-date {
+    color: rgb(130, 130, 130);
+    margin-bottom: 25px;
+}
+
+#main-footer {
+    background-color: rgb(26, 26, 26);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    cursor: pointer;
+}
+
+/* ----- SEZIONE PADRE: titolo ed elenchi ----- */
+#main-footer h4 {
+    color: #EEEEEE;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+#main-footer ul li a {
+    text-decoration: none;
+    color: #B3B3B3;
+    font-size: 12px;
+    margin: 7px;
+    font-weight: 600;
+}
+
+#main-footer ul li {
+    list-style: none;
+}
+
+#main-footer ul li:hover {
+    text-decoration: underline;
+    text-decoration-color: white;
+
+}
+
+/* ----- CONTENITORE FIGLIO: parte superiore ----- */
+.top-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+/* ----- SEZIONE NIPOTE SUPERIORE: parte sinistra ----- */
+/* ----- SEZIONE NIPOTE SUPERIORE: titolo, paragrafo e icone social ----- */
+.left-footer h4 {
+    font-size: 25px !important;
+}
+
+.left-footer p {
+    color: #EEEEEE;
+    font-size: 14px;
+}
+
+/* ----- Sezione social ----- */
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social-icon img {
+    width: 32px;
+    height: 32px;
+}
+
+
+/* ----- SEZIONE NIPOTE: parte destra ----- */
+/* ----- SEZIONE NIPOTE: titolo, paragrafo ----- */
+.right-footer ul li {
+    color: #B3B3B3;
+    font-size: 12px;
+    margin-bottom: 7px;
+    font-weight: 600;
+}
+
+/* ----- SEZIONE FIGLIO: parte inferiore ----- */
+#footer-side {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-top: 2px solid white;
+    padding-top: 50px;
+    color: #B3B3B3;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* ----- SEZIONE NIPOTE INFERIORE: elenchi e disclaimer ----- */
+.bottom-footer ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 15px;
+    font-size: 12px;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+}
+
+.disclaimer-footer p {
+    font-size: 11px;
+    color: #B3B3B3;
+    text-align: justify;
+    padding-top: 50px;
+    justify-content: center;
+    align-items: center;
+    cursor: default;
+}
+
+/* ----- SEZIONE @media DEL FOOTER ----- */
+@media(max-width:900px) {
+    .top-footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .left-footer h4 {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    .center-footer ul li,
+    .right-footer ul li {
+        display: none;
+    }
+}
