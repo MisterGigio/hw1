@@ -45,7 +45,7 @@ Il sito web include:
 
 - **Spotify API**: permette di cercare una **band o artista** e visualizzare tutti i **suoi album**;
 - **NewsAPI**: consente di cercare **notizie musicali** legate a una **parola chiave** e ottenere risultati rilevanti.
-- 
+
 ---
 
 ## Layout e stile
